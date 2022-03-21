@@ -3,7 +3,7 @@
 
 # function params:
 # profileName: name of vpn profile in web interface
-# profileId: id of vpn profile is found at /usr/syno/etc/synovpnclient/openvpn/ovpnclient.conf
+# profileId: id of vpn profile in /usr/syno/etc/synovpnclient/openvpn/ovpnclient.conf
 connectToProfile() {
 	if synovpnc get_conn | grep -q 'No connection'
 	then
@@ -25,7 +25,7 @@ connectToProfile() {
 
 connectToProfile profileId1 profileName1
 connectToProfile profileId2 profileName2
-connectToProfile profileId2 profileName2
+connectToProfile profileId3 profileName3
 
 if synovpnc get_conn | grep -q 'No connection'
 then
